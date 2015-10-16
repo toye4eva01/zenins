@@ -133,40 +133,19 @@ $('#show-display').load('change.html');
 //return false;
 	
 //});
-$('#show-display').on('click', '.upclass', function(){	   
+$('#show-display').on('click', '#updatebtn', function(){	   
 
 
-var firstname = $('#firstname').val();
-var email = $('#email').val();
-var phone = $('#phone').val();
-var address = $('#addy').val();
-//var state = $('#state').val();
+var fname = $('#fname').val();
+var addy = $('#addy').val();
 
 
-if(firstname==""){
+
+if(fname==""){
 $("#warn").text ("Kindly enter the First Name");
 return false;
 }
 
-if(state==""){
-$("#warn").text ("Kindly select address state");
-return false;
-}
-
-else if(email !=="" && !validateEmail(email)){
-	$("#warn").text ("Kindly enter a valid email");
-	return false;
-}
-
-else if(phone =="" || !$.isNumeric(phone)){
-	$("#warn").text ("Kindly enter a valid Phone number");
-	return false;
-}
-
-else if(phone.length > 11){
-$("#warn").text ("Phone number have a maximum of 11 digits ");
-return false;
-}
 
 else if(addy.length > 240){
 $("#warn").text ("The address seems to be too long");
@@ -177,7 +156,7 @@ else {
 	
 	$.ajax({
 									type: "POST",
-									url: "http://rewardsboxnigeria.com/demodiscount/mobize/editmemberscript.php",
+									url: "editmemberscript.php",
 									data: {fname:fname, mname:mname, lname:lname, addy:addy, memberid:memberid},
 																		
 									success: function(msg){
@@ -195,7 +174,6 @@ else {
 return false;
 }
 });
-
 
 
   $('#show-display').on('click', '.image-message', function(){
