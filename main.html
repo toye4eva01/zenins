@@ -49,6 +49,19 @@ $('.loading-mask').addClass('stop-loading');
 //return false;
 })
 
+$('#show-display').on('click', '.merch', function(){
+
+
+ $('.loading-mask').removeClass('stop-loading');
+        
+$('#show-display').load('merchant.html');	
+
+$('.loading-mask').addClass('stop-loading');  
+//return false;
+});
+
+
+
 $('#mercha').click(function(){
 	
 $('.loading-mask').removeClass('stop-loading');
