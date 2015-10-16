@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zenith Insurance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <link rel="stylesheet" type="text/css" href="css/washington.css">
+  <script src="js/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/logoStandford32.ico">
+  <link rel="apple-touch-icon" href="images/logoStandford32.ico">
+  <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+<script>
+
+$(document).ready(function(){
+		//alert("loading");
+	//$('#show-display').load('test.html');
+	//$('#moshow').load('modal-show.php');
+$('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/offerslides.php');	
+$('#noteno').load('http://rewardsboxnigeria.com/demodiscount/mobize/notifycount.php');
+
+
+$('#sett').click(function(){
+	
+//alert("click");
+$('.loading-mask').removeClass('stop-loading');
+        
+$('#show-display').load('test2.html');	
+
+$('.loading-mask').addClass('stop-loading');  
+  
+  //$('.loading-mask').hide();
+       
+//return false;
+})
+
+$('#mercha').click(function(){
+	
+$('.loading-mask').removeClass('stop-loading');
+        
+$('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/merchant.php');	
+
+$('.loading-mask').addClass('stop-loading');  
+//return false;
+});
+
+
+$('#promoclick').click(function(){
+	
+//$('.loading-mask').removeClass('stop-loading');
+        
+$('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/promo.php');	
+
+//$('.loading-mask').addClass('stop-loading');  
+//return false;
+});
+
+$('#vouch').click(function(){
+	
+//$('.loading-mask').removeClass('stop-loading');
+        
+$('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/voucher.php');	
+
+//$('.loading-mask').addClass('stop-loading');  
+
+//return false;
+});
+
+
+$('#tra').click(function(){
+	
+$('.loading-mask').removeClass('stop-loading');
+        
+$('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/transaction.php');	
+
+$('.loading-mask').addClass('stop-loading'); 
+
+//return false; 
+
+});
+
+
+
+$('#notifica').click(function(){
+$('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/notification.php');	
+//return false;	
+});
+
+$('#faq1').click(function(){
+$('#show-display').load('faq.html');	
+//	return false;
+});
+
+$('#cont').click(function(){
+$('#show-display').load('contact.html');	
+
+//return false;	
+});
+
+
+$('#pro1').click(function(){
+$('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/profile.php');	
+
+//return false;
+	
+});
+
+$('#chan1').click(function(){
+$('#show-display').load('change.html');	
+
+//return false;
+	
+});
+
+//$('#con1').click(function(){
+//$('#show-display').load('contact.html');	
+
+//return false;
+	
+//});
+
+
+$('#show-display').on('click','.loginform',function() {
+			//alert("work");
+var storeid = $(this).attr('id');
+//alert(storeid);
+$.ajax({
+									type: "POST",
+									url: "http://rewardsboxnigeria.com/demodiscount/mobize/genvoucher.php",
+									data: {storeid:storeid},
+																		
+									success: function(msg){
+									if (msg.success == false) {
+									$("#warn").html("There was an error submitting the form. Please try again.");
+									} else {
+										if(msg ==1001) {
+											alert("Voucher Generated Successfully");
+										}
+										else if (msg == 2003){
+										alert("You have a valid voucher for this store");
+										}
+										else {
+										alert(msg);
+										}
+									//$('#main_section').html('<img src="images/loading.gif" />');
+									//$('#main_section').html(msg);
+									//alert(msg);
+									//alert("Voucher has been generated successfully");
+										
+									}
+													
+									}
+									
+								});
+return false;
+});
+
+
+$('#logout').click(function(){
+	//alert("logpout");
+$.ajax({
+									//type: "POST",
+									url: "http://rewardsboxnigeria.com/demodiscount/mobi/logout3.php",
+									//data: $("#contact").serialize(),
+									//data: {name:name, email:email, message:message},
+																		
+									success: function(msg){
+									(msg); 
+									$('#loggout').html("You have been Logged out");
+									window.location.replace('index.html');
+																												
+									}	
+	
+
+
+});
+});
+		
+})
+
+
+</script>
+</head>
+<body>
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content" id="main-stack">
+      <div class="w-nav navbar" data-collapse="all" data-animation="over-left" data-duration="400" data-contain="1" data-easing="ease-out-quint" data-no-scroll="1">
+        <div class="w-container">
+          <nav class="w-nav-menu nav-menu" role="navigation">
+            <div class="nav-menu-header">
+              <div class="logo"><img src="images/logo.png" alt="logo"></div>
+             <!-- <div class="slogan">All you need is here.</div>-->
+            </div>
+            <a class="w-clearfix w-inline-block nav-menu-link" href="main.html" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-home-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Home</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="mercha" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-keypad-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Merchants</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="promoclick" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-download-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Promos</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="vouch" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-checkmark-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Vouchers</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="tra" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-list-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Transactions</div>
+             <!-- <div class="nav-menu-text-right">8</div>-->
+            </a>
+          <!--  <a class="w-clearfix w-inline-block nav-menu-link">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-person-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Point Balance</div>
+             <!-- <div class="nav-menu-text-right">14</div>
+            </a>-->
+            <a class="w-clearfix w-inline-block nav-menu-link" id="notifica" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-chatboxes-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Notifications</div>
+              <div class="nav-menu-text-right spanred" id="noteno">8</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="faq1" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-albums-outline"></div>
+              </div>
+              <div class="nav-menu-titles">FAQ</div>
+             <!-- <div class="nav-menu-text-right">8</div>-->
+            </a>
+         <!--   <a class="w-clearfix w-inline-block nav-menu-link" href="social.html" data-load="1">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-chatboxes-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Social</div>
+            </a> -->
+            <a class="w-clearfix w-inline-block nav-menu-link" id="cont" href="contact.html" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-keypad-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Contact Us</div>
+             <!-- <div class="nav-menu-text-right">12</div>-->
+            </a>
+          <!--  <a class="w-clearfix w-inline-block nav-menu-link" href="news.html" data-load="1">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-paper-outline"></div>
+              </div>
+              <div class="nav-menu-titles">News List</div>
+              <div class="nav-menu-text-right">14</div>
+            </a> -->
+             <div class="separator-bottom"></div>
+             <div class="separator-bottom"></div>
+             <div class="separator-bottom"></div>
+             <div class="separator-bottom"></div>
+             
+            <a class="w-clearfix w-inline-block nav-menu-link" id="pro1" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-person-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Profile</div>
+             <!-- <div class="nav-menu-text-right">14</div>-->
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="chan1" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-person-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Change Password</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="logout" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-unlocked-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Sign Out</div>
+            </a>
+            <!--<a class="w-clearfix w-inline-block nav-menu-link" href="elements.html" data-load="1">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-box-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Elements</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="sett" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-gear-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Settings</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link last" id ="ter" href="#" data-load="1">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-bookmarks-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Terms and Conditions</div>
+            </a>-->
+            <div class="separator-bottom"></div>
+            <div class="separator-bottom"></div>
+            <div class="separator-bottom"></div>
+          </nav>
+         <div class="wrapper-mask" data-ix="menu-mask"></div>
+          
+          <div class="navbar-title"><img src="images/zlogo.png" height="30"/>Zenith Insurance</div>
+          <div class="w-nav-button navbar-button left" id="menu-button" data-ix="hide-navbar-icons">
+            <div class="navbar-button-icon home-icon">
+              <div class="bar-home-icon"></div>
+              <div class="bar-home-icon"></div>
+              <div class="bar-home-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body padding" id="show-display">
+
+      </div>
+    </div>
+    <div class="page-content loading-mask" id="new-stack">
+      <div class="loading-icon">
+        <div class="navbar-button-icon icon ion-load-d"></div>
+      </div>
+    </div>
+    <div class="shadow-layer"></div>
+  </section>
+ <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+  <script type="text/javascript" src="js/framework.js"></script>
+  <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
