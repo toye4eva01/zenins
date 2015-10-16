@@ -63,6 +63,9 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/framework.js"></script>
   <script>
+  $(document).ready(function(e) {
+    $('#nmessage').load('nmessage.php');
+});
 function goBack() {
     window.history.back();
 }

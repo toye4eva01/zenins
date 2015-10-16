@@ -893,14 +893,8 @@ a {
   height: 280px;
 }
 .image-message {
-  position: relative;
-  display: inline-block;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  width: 48px;
-  height: 48px;
-  margin-top: 7px;
-  border-radius: 25px;
+  float:right;
+  
 }
 .column-left {
   position: relative;

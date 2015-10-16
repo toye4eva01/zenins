@@ -97,7 +97,7 @@ $('.loading-mask').addClass('stop-loading');
 
 
 $('#notifica').click(function(){
-$('#show-display').load('notification.html');	
+$('#show-display').load('notification.php');	
 //return false;	
 });
 
@@ -133,6 +133,40 @@ $('#show-display').load('change.html');
 //return false;
 	
 //});
+
+  $('#show-display').on('click', '.image-message', function(){
+	   var id = $(this).attr('id');
+//alert(id);
+$.ajax({
+									type: "POST",
+									url: "http://rewardsboxnigeria.com/demodiscount/mobize/nmessage.php",
+									data: {id:id},
+																		
+									success: function(msg){
+									if (msg.success == false) {
+									$("#warn").html("There was an error submitting the form. Please try again.");
+									} else {
+										$('#noteno').load('http://rewardsboxnigeria.com/demodiscount/mobize/notifycount.php');
+                                        $('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/notification.php');
+										
+										}
+									//$('#main_section').html('<img src="images/loading.gif" />');
+									//$('#*main_section').html(msg);
+									//alert(msg);
+									//alert("Voucher has been generated successfully");
+										
+									}
+													
+									
+									
+	  
+	     });
+	   
+	   });
+	   
+
+
+
 
 
 $('#show-display').on('click','.loginform',function() {
