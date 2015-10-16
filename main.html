@@ -135,11 +135,12 @@ $('#show-display').load('change.html');
 //});
 $('#show-display').on('click', '#updatebtn', function(){	   
 
-
+//alert("GO");
 var fname = $('#fname').val();
 var addy = $('#addy').val();
-
-
+var mname = $('#mname').val();
+var lname = $('#lname').val();
+//var fname = $('#fname').val();
 
 if(fname==""){
 $("#warn").text ("Kindly enter the First Name");
@@ -153,11 +154,11 @@ return false;
 }
 
 else {
-	
+	alert("GSO");
 	$.ajax({
 									type: "POST",
-									url: "editmemberscript.php",
-									data: {fname:fname, mname:mname, lname:lname, addy:addy, memberid:memberid},
+									url: "http://rewardsboxnigeria.com/demodiscount/mobize/editmemberscript.php",
+									data: {fname:fname, mname:mname, lname:lname, addy:addy},
 																		
 									success: function(msg){
 									if (msg.success == false) {
@@ -174,6 +175,7 @@ else {
 return false;
 }
 });
+
 
 
   $('#show-display').on('click', '.image-message', function(){
