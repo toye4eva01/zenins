@@ -155,7 +155,8 @@ ul li input[type=checkbox]:checked ~ i:after {
 }
 
 .dropdownv{
-  margin-left: 20px;
+	float:right;
+  margin-left: 30px;
 
 }
 
