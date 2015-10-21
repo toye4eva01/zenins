@@ -155,8 +155,8 @@ ul li input[type=checkbox]:checked ~ i:after {
 }
 
 .dropdownv{
-  margin-left: 95px;
-  
+  margin-left: 20px;
+
 }
 
 @keyframes flipdown {
