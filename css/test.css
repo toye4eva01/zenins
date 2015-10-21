@@ -71,7 +71,11 @@ h2 {
   background-color: #fefffa;
   margin: 0;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
+}
+
+h3 { margin:2px;
+text-align:left;
 }
 
 p {
