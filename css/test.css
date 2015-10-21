@@ -122,8 +122,8 @@ ul li i {
 }
 ul li i:before, ul li i:after {
   content: "";
-  position: absolute;
-  background-color: #ff6873;
+  /*position: relative;*/
+  background-color: #CE000B;
   width: 3px;
   height: 9px;
 }
@@ -152,6 +152,11 @@ ul li input[type=checkbox]:checked ~ i:before {
 }
 ul li input[type=checkbox]:checked ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
+}
+
+.dropdownv{
+  margin-left: 95px;
+  
 }
 
 @keyframes flipdown {
