@@ -308,6 +308,18 @@ $.ajax({
 
 })
 
+document.addEventListener("backbutton", dismissApp, false);
+function dismissApp() {
+   if (navigator && navigator.app) {
+      navigator.app.exitApp();
+   } 
+   else {
+      if (navigator && navigator.device) {
+         navigator.device.exitApp();
+      }
+   }
+}
+
 
   </script>
 </head>
