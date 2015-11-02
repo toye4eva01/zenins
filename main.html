@@ -35,6 +35,17 @@
 <script>
 
 $(document).ready(function(){
+	
+	function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+            }
+
+            function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
+
 		//alert("loading");
 	//$('#show-display').load('test.html');
 	//$('#moshow').load('modal-show.php');
@@ -313,14 +324,11 @@ $.ajax({
 
 })
 
-function exitFromApp()
-             {
-                navigator.app.exitApp();
-             }
+
 
   </script>
 </head>
-<body>
+<body onload="onLoad();>
   <section class="w-section mobile-wrapper backgroundpg1">
 
     <div class="page-content" id="main-stack">
