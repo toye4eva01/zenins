@@ -167,6 +167,9 @@ $('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/promo.
 });
 
 
+
+
+
 $('#show-display').on('click', '#updatebtn', function(){
 
 //alert("GO");
@@ -310,6 +313,10 @@ $.ajax({
 
 })
 
+function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
 
   </script>
 </head>
@@ -420,6 +427,12 @@ $.ajax({
                 <div class="icon ion-ios-unlocked-outline"></div>
               </div>
               <div class="nav-menu-titles">Sign Out</div>
+            </a>
+              <a class="w-clearfix w-inline-block nav-menu-link" onClick="exitFromApp()" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-close-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Exit</div>
             </a>
             <!--<a class="w-clearfix w-inline-block nav-menu-link" href="elements.html" data-load="1">
               <div class="icon-list-menu">
