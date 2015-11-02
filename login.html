@@ -72,6 +72,16 @@
   
   <script>
 $(document).ready(function(e) {
+	var storedvalue = localStorage.getItem('text');
+var storedvalue2 = localStorage.getItem('password');
+
+if(storedvalue){
+	//document.getElementById('username').value = storedvalue;
+	//document.getElementById('password').value = storedvalue2;
+	var username = storedvalue;
+	var password = storedvalue2;
+	
+}
     
 //});
 	  $('#login').click(function(){
@@ -100,6 +110,10 @@ $(document).ready(function(e) {
 											alert("There was an error submitting the form. Please try again.");
 											} else {
 												if (msg.status ==1001){
+													 var usernamevalue = document.getElementById('username').value;
+  													localStorage.setItem('text', usernamevalue);
+ 												 var passwordvalue = document.getElementById('password').value;
+				  									localStorage.setItem('password', passwordvalue);
 												window.location.replace('main.html');
 												}
 												//else if (msg.status ==1002){
