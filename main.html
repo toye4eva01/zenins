@@ -13,6 +13,17 @@
   <link rel="stylesheet" type="text/css" href="css/default.css">
   <script src="js/webfont.js"></script>
   <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+  <script> 
+  
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+    alert("test");
+}</script>
   <script>
     WebFont.load({
       google: {
