@@ -60,6 +60,16 @@ function onBackKeyDown() {
     }
 }
 </script>
+<script> 
+alert(Offline.check());
+Offline.on('up', function() {
+    alert('up');
+});
+Offline.on('down', function() {
+    alert('down')
+});
+
+</script>
   <script type="text/javascript" src="js/modernizr.js"></script>
    <script type="text/javascript" src="js/jquery.min.js"></script>
    <script src="js/prefixfree.min.js"></script>
