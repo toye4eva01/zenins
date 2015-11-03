@@ -60,7 +60,8 @@ function onBackKeyDown() {
     }
 }
 </script>
-<script> 
+<script>
+Offline.options = {checkOnLoad: true, checks: {image: {url: 'http://www.vitaminedz.com/photos/49/02-49565-front-de-mer-a-oran.jpg'}, active: 'image'}}
 alert(Offline.check());
 Offline.on('up', function() {
     alert('up');
