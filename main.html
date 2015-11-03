@@ -39,38 +39,8 @@ function onBackKeyDown() {
       }
     });
   </script>
-  <script>
-  function doesConnectionExist() {
-    var xhr = new XMLHttpRequest();
-    var file = "http://rewardsboxnigeria.com/demodiscount/mobize/offerslides.php";
-    var randomNum = Math.round(Math.random() * 10000);
-     
-    xhr.open('HEAD', file + "?rand=" + randomNum, false);
-     
-    try {
-        xhr.send();
-         
-        if (xhr.status >= 200 && xhr.status < 304) {
-            return true;
-        } else {
-            return false;
-        }
-    } catch (e) {
-        return false;
-    }
-}
-</script>
-<script>
-Offline.options = {checkOnLoad: true, checks: {image: {url: 'http://www.vitaminedz.com/photos/49/02-49565-front-de-mer-a-oran.jpg'}, active: 'image'}}
-alert(Offline.check());
-Offline.on('up', function() {
-    alert('up');
-});
-Offline.on('down', function() {
-    alert('down')
-});
+  
 
-</script>
   <script type="text/javascript" src="js/modernizr.js"></script>
    <script type="text/javascript" src="js/jquery.min.js"></script>
    <script src="js/prefixfree.min.js"></script>
