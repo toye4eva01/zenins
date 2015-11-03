@@ -22,7 +22,13 @@ function onDeviceReady() {
 }
 
 function onBackKeyDown() {
-    alert("test");
+     if (confirm("Exit?")) {
+        navigator.app.exitApp();
+    }
+}
+
+document.addEventListener("exit", function(){ 
+              
 }</script>
   <script>
     WebFont.load({
@@ -53,10 +59,7 @@ $(document).ready(function(){
                   document.addEventListener("deviceready", onDeviceReady, true);
             }
 
-            function exitFromApp()
-             {
-                navigator.app.exitApp();
-             }
+         
 
 		//alert("loading");
 	//$('#show-display').load('test.html');
@@ -167,6 +170,14 @@ $('#show-display').load('http://rewardsboxnigeria.com/demodiscount/mobize/profil
 
 $('#chan1').click(function(){
 $('#show-display').load('change.html');
+
+//return false;
+
+});
+
+$('#exit').click(function(){
+
+navigator.app.exitApp();
 
 //return false;
 
@@ -448,7 +459,7 @@ $.ajax({
               </div>
               <div class="nav-menu-titles">Sign Out</div>
             </a>
-              <a class="w-clearfix w-inline-block nav-menu-link" onClick="exitFromApp()" href="#" data-easing="ease-in-quint">
+              <a class="w-clearfix w-inline-block nav-menu-link" id="exit" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-close-outline"></div>
               </div>
