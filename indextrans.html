@@ -60,7 +60,7 @@ $(document).ready(function(e) {
 	
 var storedvalue = localStorage.getItem('text');
 var storedvalue2 = localStorage.getItem('password');
-
+document.addEventListener("offline", function(){ alert("You're offline") }, false);
 if(storedvalue){
 	//document.getElementById('username').value = storedvalue;
 	//document.getElementById('password').value = storedvalue2;
