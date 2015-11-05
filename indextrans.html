@@ -24,7 +24,7 @@
 
   <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body onload="onLoad();">
   <section class="w-section mobile-wrapper">
 
     <div class="page-content" id="main-stack" data-scroll="0">
@@ -61,12 +61,14 @@ $(document).ready(function(e) {
 	
 var storedvalue = localStorage.getItem('text');
 var storedvalue2 = localStorage.getItem('password');
-function()
+
+function onLoad()
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
             }
-
-document.addEventListener("offline", function(){ alert("You're offline") }, false);
+    
+     document.addEventListener("offline", function(){ alert("You're offline") }, false);
+   //  document.addEventListener("online", function(){ alert("You're online") }, false);
 if(storedvalue){
 	//document.getElementById('username').value = storedvalue;
 	//document.getElementById('password').value = storedvalue2;
