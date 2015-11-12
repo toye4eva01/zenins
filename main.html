@@ -19,8 +19,7 @@
   <script> 
   
   document.addEventListener("deviceready", onDeviceReady, false);
-window.plugin.notification,add({message: String,});
-window.plugin.notification.local.add({message: 'Notification working'});
+
 
 function onDeviceReady() {
     document.addEventListener("backbutton", onBackKeyDown, false);
@@ -61,7 +60,8 @@ function onBackKeyDown() {
 <script>
 
 $(document).ready(function(){
-	
+	window.plugin.notification,add({message: String,});
+window.plugin.notification.local.add({message: 'Notification working'});
 	function onLoad()
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
