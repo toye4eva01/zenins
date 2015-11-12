@@ -63,13 +63,13 @@ $(document).ready(function(){
 	function onLoad()
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
-                   window.plugin.notification.local.add({message: 'Notification working'});
+                   
             }
 
     
      document.addEventListener("offline", function(){ alert("You're offline") }, false);
-     document.addEventListener("online", function(){ alert("You're online") }, false);
-    
+     document.addEventListener("online", function(){ alert("You're online") }, true);
+        window.plugin.notification.local.add({message: 'Notification working'});
   	
   	
   	
