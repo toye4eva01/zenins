@@ -75,11 +75,12 @@ $(document).ready(function(){
   	
   document.addEventListener('deviceready', function (){
   	
-  	
+  window.plugin.notification.add({message: String});
+window.plugin.notification.local.add({message: 'Notification working'});
+
   }, false);
   
- window.plugin.notification.add({message: String});
-window.plugin.notification.local.add({message: 'Notification working'});
+ 
   	
    
 
