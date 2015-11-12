@@ -15,7 +15,7 @@
   <script src="js/webfont.js"></script>
    <script type="text/javascript" charset="utf-8" src="offline.min.js"></script>
   <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
-  <script type="text/javascript" charset="utf-8" src="localnotification.js"></script>  
+  <script type="text/javascript" charset="utf-8" src="js/localnotification.js"></script>  
   <script> 
   
   document.addEventListener("deviceready", onDeviceReady, false);
@@ -60,8 +60,7 @@ function onBackKeyDown() {
 <script>
 
 $(document).ready(function(){
-	window.plugin.notification,add({message: String,});
-window.plugin.notification.local.add({message: 'Notification working'});
+	
 	function onLoad()
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
@@ -74,7 +73,13 @@ window.plugin.notification.local.add({message: 'Notification working'});
         
   	
   	
+  document.addEventListener('deviceready', function (){
   	
+  	
+  }, false);
+  
+ window.plugin.notification.add({message: String});
+window.plugin.notification.local.add({message: 'Notification working'});
   	
    
 
