@@ -15,6 +15,7 @@
   <script src="js/webfont.js"></script>
    <script type="text/javascript" charset="utf-8" src="offline.min.js"></script>
   <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+  <script type="text/javascript" charset="utf-8" src="localnotification.js"></script>  
   <script> 
   
   document.addEventListener("deviceready", onDeviceReady, false);
@@ -93,6 +94,7 @@ $(document).ready(function(){
     
      document.addEventListener("offline", function(){ alert("You're offline") }, false);
      document.addEventListener("online", function(){ alert("You're online") }, false);
+     window.plugin.notification.local.add({message: 'Notification working'});
   	
   	
   	
